@@ -1,0 +1,109 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.container{
+    display: grid;
+    grid-template-columns:1fr 3fr 1fr ;
+    grid-template-rows: 0.3fr 0.7fr 3fr 0.8fr;
+    grid-template-areas: 
+    "nav nav nav "
+    "header header header"
+    "sidebar main left"
+    "sidebar main left"
+    "footer footer footer";
+    height: 100vh;
+    column-gap: 10px;
+    background: #b56576;
+}
+.container > div {
+    color: white;
+    font-weight: bold;
+}
+.nav{
+    grid-area: nav;
+    background: #eaac8b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header{
+    grid-area: header;
+    background: #e56b6f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar{
+    grid-area: sidebar;
+    background: #955361;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    background: #6d597a;
+}
+.main .box{
+    background: #4a3c53;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    color: white;
+    margin: 7px;
+}
+.box span{
+    background: #000;
+    padding: 10px;
+    border-radius: 10px 0px 0px 0px ;
+}
+.left{
+    display: grid;
+    grid-area: left;
+    grid-template-rows: repeat(2,1fr);
+    background: #cbb0b0;
+}
+.baner-1{
+    background: #905c68;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.baner-2{
+    background: #794d56;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer{
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    height: 15vh;
+    text-align: center;
+}
+.footer-left{
+    background: #355070;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-center{
+    background: #293e58;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-right{
+    background: #1b293b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
